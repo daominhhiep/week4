@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" style="background-color: black"></canvas>
+<script>
+    function Rectangle(length, width) {
+        this.length = length;
+        this.width = width;
+        this.getAcreage = function () {
+            return (this.length + this.width)*2;
+        };
+        this.getPerimeter = function () {
+            return this.length*width;
+        };
+        this.createRectangle = function () {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle="#FF0000"
+            ctx.fillRect(0,0,length,width);
+            ctx.stroke();
+        };
+    }
+    let rectange = new Rectangle(200,100);
+    let acreage = rectange.getAcreage();
+    let perimeter = rectange.getPerimeter();
+    alert('Chu vi hình chữ nhật là: ' + acreage);
+    alert('Diện tích hình chữ nhật là: ' + perimeter);
+    rectange.createRectangle();
+</script>
+
+</body>
+</html>
