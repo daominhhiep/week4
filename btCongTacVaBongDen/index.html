@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc và đèn</title>
+
+</head>
+<body>
+<h1>Công tắc và đèn</h1>
+<div>
+    <img src="img/switch_off.png" alt="switch" id="switch" onclick="flipSwitch()" style="width: 100px">
+    <img src="img/light_off.png" alt="light" id="light" style="width: 300px">
+</div>
+<script src="switch_button.js"></script>
+<script src="electric_lamp.js"></script>
+<script>
+    let bedLamp = new ElectricLamp();
+    let bedSwitch = new SwitchButton(bedLamp);
+</script>
+</body>
+</html>

@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    var Battery = function () {
+    let Battery = function () {
         this.setEnergy = function (energy) {
             this.energy = energy;
         };
@@ -19,7 +19,8 @@
             }
         }
     };
-    var FlashLamp = function () {
+
+    let FlashLamp = function () {
         this.setBattery = function (battery) {
             this.battery = battery;
         };
@@ -34,6 +35,7 @@
             }
         };
         this.turnOn = function () {
+            this.battery.decreaseEnergy();
             this.status = true;
         };
         this.turnOff = function () {
@@ -46,17 +48,11 @@
     var flashLamp = new FlashLamp();
     flashLamp.setBattery(battery);
 
-    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-    flashLamp.light();
+    document.write("Pin hien tai: "+flashLamp.getBatteryInfo());
 
-    document.write("Turn on<br/>")
     flashLamp.turnOn();
     flashLamp.light();
-    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-
-    document.write("Turn off<br/>")
-    flashLamp.turnOff();
-    flashLamp.light();
-</script>
+    document.write("Pin hien tai: "+flashLamp.getBatteryInfo());
+    </script>
 </body>
 </html>
