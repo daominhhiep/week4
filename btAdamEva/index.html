@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script src="apple.js"></script>
+<script src="human.js"></script>
+<script>
+    var apple = new Apple();
+    var Adam = new Human('Adam', 'Male', 60);
+    var Eva = new Human('Eva', 'Female', 48);
+    Adam.setApple(apple);
+    Eva.setApple(apple);
+    do {
+        Adam.Say('For you ');
+        Eva.Say('OK. Thanks brother');
+        Eva.Eat();
+        Eva.Say('Your Turn !');
+        Adam.Eat();
+        console.log(apple.getWeight());
+        console.log(apple.IsEmpty());
+    } while (!apple.IsEmpty())
+</script>
+
+</html>
